@@ -3,14 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { HeaderComponent } from './header/header.component';
+import { SavingsSimulatorComponent } from './savings-simulator/savings-simulator.component';
+import { MonthPickerComponent } from './month-picker/month-picker.component';
+import { NgxCurrencyModule } from 'ngx-currency';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    SavingsSimulatorComponent,
+    MonthPickerComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgxCurrencyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

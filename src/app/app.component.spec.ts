@@ -14,22 +14,13 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 
-  it('should create the app', () => {
+  it('should have router-outlet', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(fixture.nativeElement.querySelector('router-outlet')).not.toBeNull();
   });
 
-  it(`should have as title 'saving-goal-simulator'`, () => {
+  it('should have a header element', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('saving-goal-simulator');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('saving-goal-simulator app is running!');
-  });
+    expect(fixture.nativeElement.querySelector('origin-header')).not.toBeNull();
+  })
 });
