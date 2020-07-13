@@ -1,0 +1,18 @@
+$btn-radius: 32px;
+$btn-text-size: 18px;
+
+[class*='btn-']{
+  @include fill-available;
+  border-radius: $btn-radius;
+  margin-top: 22px;
+  padding: 16px;
+
+  font-family: $font-family;
+  font-size: $btn-text-size;
+}
+
+.btn-primary{
+  background: $primary;
+  color: $text-color-light;
+  border: none;
+}

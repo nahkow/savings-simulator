@@ -1,0 +1,45 @@
+.savings-simulator{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.savings-simulator--header-text{
+  margin: 20px;
+}
+
+.savings-simulator--card-header{
+  padding-bottom: 32px;
+}
+
+.savings-simulator .origin-form{
+  display: flex;
+  flex-flow: column nowrap;
+
+}
+
+.savings-simulator--monthly-amount-card{
+  display: flex;
+  flex-flow: row nowrap;
+
+  .mountly-amount-label{
+    flex-grow: 1;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+.savings-simulator .amount-input{
+  width: 180px
+}
+
+
+@media screen and (min-width: $phone-width) {
+  .savings-simulator .origin-form {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    .origin-form-group{
+      width: 235px;
+    }
+  }
+}

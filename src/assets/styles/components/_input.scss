@@ -1,0 +1,51 @@
+.origin-form{
+  padding-bottom: 16px;
+}
+
+.origin-form-group .input-group {
+  border: $input-border-size $input-border-style $input-border-color;
+  border-radius: $input-border-radius;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 16px;
+  // width: 100%;
+}
+
+.origin-form-group label {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-color-01;
+  margin-bottom: 8px;
+}
+
+.origin-form-group .input-group-append {
+  height: $input-append-height;
+  width: $input-append-width;
+  background-color: $background-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .input-group-text {
+    color: $text-color-02;
+    font-size: $input-append-text;
+  }
+}
+
+.origin-form-group input {
+  width: calc(100% - #{$input-append-width});
+  padding: 16px;
+  border: none;
+
+  font-size: $input-text;
+  font-style: normal;
+  font-weight: 600;
+  color: $text-color-01;
+
+  &:focus {
+    outline-color: $grey-dark-08;
+  }
+}
+

@@ -1,0 +1,42 @@
+<div class="savings-simulator">
+  <p class="savings-simulator--header-text text-m text-color-primary text-center">
+    Let's plan your <span class="font-weight--bold">saving goal.</span>
+  </p>
+  <div class="origin-card">
+    <div class="savings-simulator--card-header">
+      <img src="assets/images/inssurance.svg">
+      <p class="text-l font-weight--bold">Buy a house</p>
+      <p class="text-xs text-color-light">Saving goal</p>
+    </div>
+    <div class="origin-form">
+      <div class="origin-form-group">
+        <label>Total amount</label>
+        <div class="input-group">
+          <div class="input-group-append">
+            <span class="input-group-text">$</span>
+          </div>
+          <input currencyMask type="text" [options]="{align: 'left', prefix: '' }" class="form-control"
+            [(ngModel)]="data.amount">
+        </div>
+      </div>
+      <div class="origin-form-group">
+        <label>Reach goal by</label>
+        <origin-month-picker [date]="data.date"></origin-month-picker>
+      </div>
+    </div>
+    <div class="origin-card">
+      <div class="savings-simulator--monthly-amount-card">
+        <p class="text-s font-weight--bold mountly-amount-label">
+          Monthly amount
+        </p>
+        <p class="text-color-accent text-xl mountly-amount" >{{calculateMonthlyAmount() | currency:'USD':'symbol':'1.0-2' }}</p>
+      </div>
+      <div class="origin-card--footer">
+        You’re planning <span class="font-weight--bold">{{ getMonthsToDate() }} monthly deposits</span> to reach your <span class="font-weight--bold"> {{ data.amount | currency:'USD':'symbol':'1.0-2'}}</span> goal by <span class="font-weight--bold">{{data.date.format('MMMM YYYY')}}</span>.
+      </div>
+    </div>
+    <button class="btn-primary">
+      Confirm
+    </button>
+  </div>
+</div>

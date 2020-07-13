@@ -1,0 +1,60 @@
+$font-family: Work Sans;
+
+body{
+  font-family: $font-family;
+  color: $text-color-01;
+}
+
+.text-color-primary{
+  color: $primary;
+}
+
+.text-color-accent{
+  color: $accent;
+}
+
+.text-color-light{
+ color: $text-color-02;
+}
+
+.text-xs {
+  font-size: $text-size-xs;
+}
+.text-s {
+  font-size: $text-size-s;
+}
+.text-m{
+  font-size: $text-size-m;
+}
+.text-l{
+  font-size: $text-size-l;
+}
+.text-xl{
+  font-size: $text-size-xl;
+}
+
+@media screen and (max-width: $phone-width) {
+  .text-xs{
+    font-size: $text-size-xs-mobile;
+  }
+  .text-s{
+    font-size: $text-size-s-mobile;
+  }
+  .text-m{
+    font-size: $text-size-m-mobile;
+  }
+  .text-l{
+    font-size: $text-size-l-mobile;
+  }
+  .text-xl{
+    font-size: $text-size-xl-mobile;
+  }
+}
+
+.font-weight--bold{
+  font-weight: 600;
+}
+
+.text-center{
+  text-align: center;
+}

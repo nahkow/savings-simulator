@@ -1,0 +1,57 @@
+$month-picker-button-width: 48px;
+
+.origin-month-picker {
+  width: 100%;
+  border: $input-border-size $input-border-style $input-border-color;
+  border-radius: $input-border-radius;
+  background: $grey;
+
+  display: grid;
+  grid-template-columns: $month-picker-button-width auto $month-picker-button-width;
+  grid-template-rows: $input-append-height;
+  grid-template-areas: "arrow-left display arrow-right";
+}
+
+.origin-month-picker {
+  .month-picker--arrow {
+    padding: 0;
+    border: none;
+    background: no-repeat center/20% url(/assets/images/arrow.svg);
+
+    &:focus {
+      outline-color: $grey-dark-08;
+    }
+
+    &:hover {
+      background-color: $grey-dark-10;
+    }
+
+    &[disabled] {
+      background-color: $grey-light-05;
+      background-image: url(/assets/images/arrow-disabled.svg);
+    }
+  }
+
+  .month-picker--arrow.left {
+    grid-area: arrow-left;
+  }
+
+  .month-picker--arrow.right {
+    grid-area: arrow-right;
+    transform: rotate(180deg);
+  }
+
+  .month-picker--display {
+    background: $background;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    .text-m {
+      font-size: $input-text;
+      padding-bottom: 4px;
+    }
+  }
+
+}

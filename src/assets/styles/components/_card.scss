@@ -1,0 +1,33 @@
+
+$card-padding: 24px;
+$card-padding-mobile: 18px;
+$card-footer-text-size: 12px;
+
+.origin-card{
+  background: $background;
+  border: 1px solid $grey;
+  box-shadow: 0px 1px 4px rgba(150, 164, 176, 0.1);
+  border-radius: 8px;
+  padding: $card-padding;
+}
+
+.origin-card--footer{
+  background: $background-grey;
+  margin: -$card-padding;
+  margin-top: $card-padding;
+  padding: $card-padding;
+
+  font-size: $card-footer-text-size;
+}
+
+@media screen and (max-width: $phone-width) {
+  .origin-card{
+    @include fill-available;
+    padding: $card-padding-mobile;
+  }
+  .origin-card--footer{
+    margin: -$card-padding-mobile;
+    margin-top: $card-padding-mobile;
+    padding: $card-padding-mobile;
+  }
+}

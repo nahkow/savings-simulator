@@ -1,0 +1,8 @@
+<div (keydown.ArrowLeft)="subtractMonth()" (keydown.ArrowRight)="addMonth()" class="origin-month-picker">
+  <button (click)="subtractMonth()"   [disabled]="disableLeftArrow()" class="month-picker--arrow left"></button>
+  <div class="month-picker--display">
+    <div id="month" class="text-m font-weight--bold">{{date.format('MMMM')}}</div>
+    <div id="year" class="text-xs">{{date.format('YYYY')}}</div>
+  </div>
+  <button (click)="addMonth()" class="month-picker--arrow right"></button>
+</div>
