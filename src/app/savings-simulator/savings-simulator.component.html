@@ -4,8 +4,8 @@
   </p>
   <div class="origin-card">
     <div class="savings-simulator--card-header">
-      <img src="assets/images/inssurance.svg">
-      <p class="text-l font-weight--bold">Buy a house</p>
+      <img [src]="createImageLink(goal.icon)">
+      <p class="text-l font-weight--bold">{{goal.title}}</p>
       <p class="text-xs text-color-light">Saving goal</p>
     </div>
     <div class="origin-form">
@@ -35,7 +35,7 @@
         You’re planning <span class="font-weight--bold">{{ getMonthsToDate() }} monthly deposits</span> to reach your <span class="font-weight--bold"> {{ data.amount | currency:'USD':'symbol':'1.0-2'}}</span> goal by <span class="font-weight--bold">{{data.date.format('MMMM YYYY')}}</span>.
       </div>
     </div>
-    <button class="btn-primary">
+    <button (click)="saveGoal()"  class="btn-primary">
       Confirm
     </button>
   </div>

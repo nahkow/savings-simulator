@@ -1,0 +1,20 @@
+<div class="index centered" >
+  <p class="text-l index--header font-weight--bold"> Here’s your saving goals! </p>
+  <div class="index--card-container">
+    <div *ngFor="let item of savingGoals" class="origin-card index--card">
+      <img [src]="createImageLink(item.icon)">
+      <p class=" text-center font-weight--bold">{{item.title}}</p>
+      <ng-container *ngIf="!item.value; else elseTemplate">
+        <div (click)="goToSimulator(item)" class="btn-primary"> Start setup </div>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <p class="index-card--value text-color-primary text-center text-m font-weight--bold">{{item.value | currency:'USD':'symbol':'1.0-2' }}</p>
+        <p class="index-card--sub text-color-grey-01 text-center text-xxs">reach your goal by</p>
+        <p class="index-card--month text-color-grey-02 text-center text-xs">{{ formatDate(item.goalDate) }}</p>
+      </ng-template>
+
+
+    </div>
+  </div>
+</div>
+

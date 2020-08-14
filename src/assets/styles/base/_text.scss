@@ -1,4 +1,4 @@
-$font-family: Work Sans;
+$font-family: "Work Sans";
 
 body{
   font-family: $font-family;
@@ -13,10 +13,21 @@ body{
   color: $accent;
 }
 
+.text-color-grey-01{
+  color: $text-color-grey_01;
+}
+
+.text-color-grey-02{
+  color: $text-color-grey_02;
+}
+
 .text-color-light{
  color: $text-color-02;
 }
 
+.text-xxs {
+  font-size: $text-size-xxs;
+}
 .text-xs {
   font-size: $text-size-xs;
 }
@@ -34,6 +45,9 @@ body{
 }
 
 @media screen and (max-width: $phone-width) {
+  .text-xxs{
+    font-size: $text-size-xxs-mobile;
+  }
   .text-xs{
     font-size: $text-size-xs-mobile;
   }

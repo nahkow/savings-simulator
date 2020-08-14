@@ -8,12 +8,14 @@ import { SavingsSimulatorComponent } from './savings-simulator/savings-simulator
 import { MonthPickerComponent } from './month-picker/month-picker.component';
 import { NgxCurrencyModule } from 'ngx-currency';
 import { FormsModule } from '@angular/forms';
+import { IndexComponent } from './index/index.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SavingsSimulatorComponent,
     MonthPickerComponent,
+    IndexComponent,
   ],
   imports: [
     BrowserModule,
